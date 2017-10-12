@@ -1,0 +1,52 @@
+﻿/*
+    common.css
+*/
+.page-wrapper{box-sizing:border-box;-webkit-flex:1 0 auto;flex:1 0 auto}
+.page-wrapper-simple{display:-webkit-flex;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;align-items:center;margin:100px 0}
+.page-wrapper-global{padding-top:30px}
+.page-wrapper-context{padding-top:95px}
+.page-simple{width:400px;padding:40px;border:1px solid #e6e6e6;background-color:#fff}
+.maintenance-title{margin-bottom:40px;line-height:1.5;font-size:24px;font-weight:300;text-align:center}
+.big-spacer-bottom{margin-bottom:16px}
+.big-spacer-top{margin-top:16px}
+.huge-spacer-top{margin-top:40px}
+.huge-spacer-left{margin-left:40px}
+.little-spacer-left{margin-left:4px}
+.little-spacer-right{margin-right:4px}
+.little-spacer-bottom{margin-bottom:4px}
+.little-spacer-top{margin-top:4px}
+td.spacer-left{padding-left:8px}
+td.spacer-right{padding-right:8px}
+td.spacer-bottom{padding-bottom:8px}
+td.spacer-top{padding-top:8px}
+td.big-spacer-left{padding-left:16px}
+td.big-spacer-right{padding-right:16px}
+.login-label{display:none;margin-bottom:8px;font-size:15px}
+.ie9 .login-label{display:block}
+.login-input{width:100%!important;height:auto!important;padding:5px 12px!important;font-size:20px;font-weight:300}
+.login-remember-me{display:none}
+.login-remember-me+label{display:inline-block;vertical-align:top;padding:2px;box-sizing:border-box}
+.login-remember-me+label:before{content:" ";display:block;width:10px;height:10px;border:1px solid #236a97;border-radius:2px;transition:all .2s ease}
+.login-remember-me:checked+label:before{border-color:#4b9fd5;background-color:#4b9fd5;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'%3E%3Cpath d='M12 4.665c0 .172-.06.318-.18.438l-5.55 5.55c-.12.12-.266.18-.438.18s-.318-.06-.438-.18L2.18 7.438C2.06 7.317 2 7.17 2 7s.06-.318.18-.44l.878-.876c.12-.12.267-.18.44-.18.17 0 .317.06.437.18l1.897 1.903 4.233-4.24c.12-.12.266-.18.438-.18s.32.06.44.18l.876.88c.12.12.18.265.18.438z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E")}
+.ie9 .login-remember-me:checked+label:before{background-position:-3px 0}
+.login-remember-me~label{cursor:pointer}
+.spacer-left{margin-left:8px}
+.spacer-right{margin-right:8px}
+.spacer-bottom{margin-bottom:8px}
+.spacer-top{margin-top:8px}
+.big-spacer-left{margin-left:16px}
+.big-spacer-right{margin-right:16px}
+.big-spacer-bottom{margin-bottom:16px}
+.big-spacer-top{margin-top:16px}
+.huge-spacer-top{margin-top:40px}
+.huge-spacer-left{margin-left:40px}
+.little-spacer-left{margin-left:4px}
+.little-spacer-right{margin-right:4px}
+.little-spacer-bottom{margin-bottom:4px}
+.little-spacer-top{margin-top:4px}
+td.spacer-left{padding-left:8px}
+td.spacer-right{padding-right:8px}
+td.spacer-bottom{padding-bottom:8px}
+td.spacer-top{padding-top:8px}
+td.big-spacer-left{padding-left:16px}
+button,input,select,textarea{font-family:inherit;font-size:inherit}

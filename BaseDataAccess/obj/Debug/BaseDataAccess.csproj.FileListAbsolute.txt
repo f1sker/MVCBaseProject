@@ -1,0 +1,7 @@
+D:\_workspace\BaseFramework\BaseDataAccess\bin\Debug\BaseDataAccess.dll
+D:\_workspace\BaseFramework\BaseDataAccess\bin\Debug\BaseDataAccess.pdb
+D:\_workspace\BaseFramework\BaseDataAccess\bin\Debug\BaseUtility.dll
+D:\_workspace\BaseFramework\BaseDataAccess\bin\Debug\BaseUtility.pdb
+D:\_workspace\BaseFramework\BaseDataAccess\obj\Debug\BaseDataAccess.csprojResolveAssemblyReference.cache
+D:\_workspace\BaseFramework\BaseDataAccess\obj\Debug\BaseDataAccess.dll
+D:\_workspace\BaseFramework\BaseDataAccess\obj\Debug\BaseDataAccess.pdb

@@ -1,0 +1,95 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <meta charset='UTF-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/common.css")" rel="stylesheet" />
+</head>
+<body>
+    <div id="bd" class="page-wrapper page-wrapper-simple">
+        <div id="nonav" class="page-simple">
+            <div id="content">
+                <h1 class="maintenance-title text-center">Log In</h1>
+
+                <div class="big-spacer-bottom">
+                    <label for="txtID" class="login-label">Login</label>
+                    <input type="text" id="txtID" class="login-input" maxlength="255" required placeholder="Login">
+                </div>
+
+                <p class="big-spacer-bottom">
+                    <label for="txtPassword" class="login-label">Password</label>
+                    <input type="password" id="txtPassword" class="login-input" required placeholder="Password">
+                </p>
+
+                <p class="big-spacer-bottom">
+                    <input class="login-remember-me" id="remember_me" name="remember_me" type="checkbox" value="1" checked>
+                    <label for="remember_me"></label>
+                    <label for="remember_me">Remember me</label>
+                </p>
+
+                <div>
+                    <div style="text-align: right; overflow: hidden;">
+                        <input type="button" id="btnSignUp" class="btn btn-primary" value="Sign Up" onclick="Page.FnSignUp();" />
+                        <input type="button" id="btnLogin" class="btn btn-primary" value="Login" onclick="Page.FnLogin();"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+@Scripts.Render("~/bundles/jquery")
+<script type="text/javascript">
+    var Page = {
+        FnSignUp: function() {
+            location.href = '@Url.Action("SignUp", "User")';
+        },
+        FnLogin: function () {
+            var id = $("#txtID").val();
+            var password = $("#txtPassword").val();
+            
+            if (id.length === 0) {
+                alert("input id");
+                $("#txtID").focus();
+                return false;
+            }
+            if (password.length === 0) {
+                alert("input password");
+                $("#txtPassword").focus();
+                return false;
+            }
+
+            var param = { id: id, password: password };
+            Ajax.FnCallAjax('@Url.Action("LoginProc", "User")', param, FnAjaxSuccess, FnAjaxFail);
+
+            return true;
+        }
+    };
+
+    var FnAjaxSuccess = {
+        Run: function (data) {
+            if (data === "SUCCESS") {
+                location.href = '@Url.Action("Index", "Home")';
+            }
+        }
+    };
+
+    var FnAjaxFail = {
+        Run: function (data) {
+            alert("fail");
+        }
+    };
+
+    $(function () {
+        Page.FnInit();
+    });
+
+</script>
