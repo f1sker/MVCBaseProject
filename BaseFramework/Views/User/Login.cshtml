@@ -37,7 +37,7 @@
 
                 <div>
                     <div style="text-align: right; overflow: hidden;">
-                        <input type="button" id="btnSignUp" class="btn btn-primary" value="Sign Up" onclick="Page.FnSignUp();" />
+                        <input type="button" id="btnSignUp" class="btn btn-danger" value="Sign Up" onclick="Page.FnSignUp();" />
                         <input type="button" id="btnLogin" class="btn btn-primary" value="Login" onclick="Page.FnLogin();"/>
                     </div>
                 </div>
@@ -55,20 +55,20 @@
         FnLogin: function () {
             var id = $("#txtID").val();
             var password = $("#txtPassword").val();
-            
+
             if (id.length === 0) {
-                alert("input id");
+                alert("Please enter id.");
                 $("#txtID").focus();
                 return false;
             }
             if (password.length === 0) {
-                alert("input password");
+                alert("Please enter password.");
                 $("#txtPassword").focus();
                 return false;
             }
 
             var param = { id: id, password: password };
-            Ajax.FnCallAjax('@Url.Action("LoginProc", "User")', param, FnAjaxSuccess, FnAjaxFail);
+            AjaxUtil.FnCallAjax('@Url.Action("LoginProc", "User")', param, FnAjaxSuccess, FnAjaxFail);
 
             return true;
         }
@@ -76,20 +76,21 @@
 
     var FnAjaxSuccess = {
         Run: function (data) {
-            if (data === "SUCCESS") {
+            if (data === true) {
                 location.href = '@Url.Action("Index", "Home")';
+            } else {
+                alert('Can not found User.');
             }
         }
     };
 
     var FnAjaxFail = {
         Run: function (data) {
-            alert("fail");
+            alert("Please retry.");
         }
     };
 
     $(function () {
-        Page.FnInit();
     });
 
 </script>

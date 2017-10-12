@@ -2,7 +2,7 @@
     common.js
  */
 
-var Ajax = {
+var AjaxUtil = {
     Result: null,
     FnCallAjax: function (url, param, objSuccess, objFail) {
         $.ajax({
@@ -14,17 +14,33 @@ var Ajax = {
                     objSuccess.Run(data);
                 }
 
-                Ajax.Result = data;
+                AjAjaxUtilax.Result = data;
             },
             error: function (data) {
                 if (objFail != null && objFail != undefined) {
                     objFail.Run(data);
                 }
 
-                Ajax.Result = data;
+                AjaxUtil.Result = data;
             }
         });
 
-        return Ajax.Result;
+        return AjaxUtil.Result;
+    },
+    FnReturnAjax: function(url, param) {
+        var returnData = '';
+        $.ajax({
+            url: url,
+            data: data,
+            type: 'POST',
+            async: false,
+            success: function (data) {
+                returnData = data;
+            },
+            error: function (e) {
+                console.log(e);
+            }
+        });
+        return returnData;
     }
 };

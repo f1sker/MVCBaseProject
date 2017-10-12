@@ -17,6 +17,8 @@ else
 {
     <ul class="nav navbar-nav navbar-right">
         <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-        <li>@Html.ActionLink("Log Out", "Logout", "User")</li>
+        <li>
+            @Html.ActionLink("Log Out", "Logout", "User");
+        </li>
     </ul>
 }

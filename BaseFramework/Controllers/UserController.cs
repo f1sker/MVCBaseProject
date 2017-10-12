@@ -24,7 +24,13 @@ namespace BaseFramework.Controllers
 
         public JsonResult LoginProc(string id = "", string password = "")
         {
-            string result = "SUCCESS";
+            bool result = false;
+            password = SecurityUtil.ShaEncryption(password);
+
+            int cnt = new Dac_UserInfo().SelectCountUserInfo(id, password);
+            if (cnt > 0)
+                result = true;
+
             return Json(result);
         }
 
@@ -47,13 +53,24 @@ namespace BaseFramework.Controllers
             return View();
         }
 
+        public JsonResult ValidExistUserId(string userid = "")
+        {
+            bool result = false;
+
+            int cnt = new Dac_UserInfo().SelectCountUserId(userid);
+            if (cnt > 0)
+                result = true;
+
+            return Json(result);
+        }
+
         public JsonResult SignUpProc(string userid = "", string password = "")
         {
             string flag = "";
             if (password.Length > 0)
-                password = Security.ShaEncryption(password);
+                password = SecurityUtil.ShaEncryption(password);
 
-            int result = new Dac_UserInfo().SaveUserInfo(userid, password);
+            int result = new Dac_UserInfo().InsertUserInfo(userid, password);
             if (result > 0)
                 flag = "SUCCESS";
 
