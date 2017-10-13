@@ -66,15 +66,15 @@ namespace BaseFramework.Controllers
 
         public JsonResult SignUpProc(string userid = "", string password = "")
         {
-            string flag = "";
+            bool result = false;
             if (password.Length > 0)
                 password = SecurityUtil.ShaEncryption(password);
 
-            int result = new Dac_UserInfo().InsertUserInfo(userid, password);
-            if (result > 0)
-                flag = "SUCCESS";
+            int affectedRow = new Dac_UserInfo().InsertUserInfo(userid, password);
+            if (affectedRow > 0)
+                result = true;
 
-            return Json(new string[] { flag, userid });
+            return Json(new object[] { result, userid });
         }
 
         #endregion
