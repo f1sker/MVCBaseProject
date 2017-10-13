@@ -3,3 +3,7 @@ D:\_workspace\BaseFramework\BaseUtility\bin\Debug\BaseUtility.pdb
 D:\_workspace\BaseFramework\BaseUtility\obj\Debug\BaseUtility.dll
 D:\_workspace\BaseFramework\BaseUtility\obj\Debug\BaseUtility.pdb
 D:\_workspace\BaseFramework\BaseUtility\obj\Debug\BaseUtility.csprojResolveAssemblyReference.cache
+D:\_workspace\MVCBaseProject\BaseUtility\bin\Debug\BaseUtility.dll
+D:\_workspace\MVCBaseProject\BaseUtility\bin\Debug\BaseUtility.pdb
+D:\_workspace\MVCBaseProject\BaseUtility\obj\Debug\BaseUtility.dll
+D:\_workspace\MVCBaseProject\BaseUtility\obj\Debug\BaseUtility.pdb

@@ -10,14 +10,14 @@ var AjaxUtil = {
             url: url,
             data: param,
             success: function (data) {
-                if (objSuccess != null && objSuccess != undefined) {
+                if (objSuccess !== null && objSuccess !== undefined) {
                     objSuccess.Run(data);
                 }
 
-                AjAjaxUtilax.Result = data;
+                AjaxUtil.Result = data;
             },
             error: function (data) {
-                if (objFail != null && objFail != undefined) {
+                if (objFail !== null && objFail !== undefined) {
                     objFail.Run(data);
                 }
 
@@ -31,7 +31,7 @@ var AjaxUtil = {
         var returnData = '';
         $.ajax({
             url: url,
-            data: data,
+            data: param,
             type: 'POST',
             async: false,
             success: function (data) {
